@@ -8,8 +8,12 @@ import java.util.List;
 import java.util.Optional;
 
 public class MemberService {
-    private final MemberRepository memberRepository=new MemoryMemberRepository();
+    //커맨드 시프트 t 하면 테스트 만들기 단축키
+    private final MemberRepository memberRepository;
 
+    public MemberService(MemberRepository memberRepository){
+        this.memberRepository=memberRepository;
+    }
     public Long join(Member member){
         //중복 회원 방지
          validateDuplicateMember(member);
