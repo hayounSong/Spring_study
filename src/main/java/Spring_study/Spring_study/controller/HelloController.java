@@ -1,5 +1,6 @@
 package Spring_study.Spring_study.controller;
 
+import Spring_study.Spring_study.domain.Member;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.ui.Model;
@@ -31,6 +32,14 @@ public class HelloController {
         hello.setName(name);
         return hello;
         //객체를 반환하면 json 형식으로 된다
+    }
+    @GetMapping("practice")
+    @ResponseBody
+    public Member memberApi(){
+        Member member=new Member();
+        member.setName("하윤");
+        member.setId(3L);
+        return member;
     }
 
     static class Hello{
