@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+
 //Spring에 등록!
 public class MemberService {
     //커맨드 시프트 t 하면 테스트 만들기 단축키
