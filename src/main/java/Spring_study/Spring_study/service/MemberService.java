@@ -3,14 +3,18 @@ package Spring_study.Spring_study.service;
 import Spring_study.Spring_study.domain.Member;
 import Spring_study.Spring_study.repository.MemberRepository;
 import Spring_study.Spring_study.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
+//Spring에 등록!
 public class MemberService {
     //커맨드 시프트 t 하면 테스트 만들기 단축키
     private final MemberRepository memberRepository;
-
+    @Autowired
     public MemberService(MemberRepository memberRepository){
         this.memberRepository=memberRepository;
     }

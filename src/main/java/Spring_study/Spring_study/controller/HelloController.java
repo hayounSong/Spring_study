@@ -1,6 +1,7 @@
 package Spring_study.Spring_study.controller;
 
 import Spring_study.Spring_study.domain.Member;
+import Spring_study.Spring_study.repository.MemoryMemberRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.ui.Model;
@@ -36,10 +37,15 @@ public class HelloController {
     @GetMapping("practice")
     @ResponseBody
     public Member memberApi(){
+        MemoryMemberRepository memberRepository=new MemoryMemberRepository();
         Member member=new Member();
-        member.setName("하윤");
-        member.setId(3L);
-        return member;
+        member.setName("ss");
+        memberRepository.save(member);
+        Member member2=new Member();
+        member.setName("sss");
+        memberRepository.save(member2);
+        return memberRepository.findAll().get(1);
+
     }
 
     static class Hello{

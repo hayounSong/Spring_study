@@ -1,6 +1,7 @@
 package Spring_study.Spring_study.repository;
 
 import Spring_study.Spring_study.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
