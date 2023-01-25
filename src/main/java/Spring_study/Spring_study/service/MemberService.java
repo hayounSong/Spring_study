@@ -5,12 +5,14 @@ import Spring_study.Spring_study.repository.MemberRepository;
 import Spring_study.Spring_study.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
 
 //Spring에 등록!
+@Transactional
 public class MemberService {
     //커맨드 시프트 t 하면 테스트 만들기 단축키
     private final MemberRepository memberRepository;

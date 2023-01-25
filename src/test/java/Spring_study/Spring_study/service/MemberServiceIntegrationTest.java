@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 @SpringBootTest
-@Transactional
+//@Transactional
 // test를 반복하게 해주는 친구
 class MemberServiceIntegrationTest {
     @Autowired MemberService memberService;
@@ -25,7 +25,7 @@ class MemberServiceIntegrationTest {
     void join() {
         //given
         Member member=new Member();
-        member.setName("spring");
+        member.setName("springs");
         //when
         Long saveId= memberService.join(member);
         //then
