@@ -6,12 +6,11 @@ import javax.persistence.*;
 public class Member
 {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    //DB가 생성해주는건 Identity
     private Long id;
-
+    //DB가 생성해주는건 Identity
     private String name;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
